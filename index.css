@@ -25,7 +25,7 @@ body {
     color: whitesmoke;
 }
 
-.grid-container {
+#grid-container {
     box-sizing: border-box;
     display: flex;
     border: 1px solid darkslategray;
