@@ -24,3 +24,17 @@ body {
     background-color: darkslategray;
     color: whitesmoke;
 }
+
+.grid-container {
+    box-sizing: border-box;
+    display: flex;
+    border: 1px solid darkslategray;
+}
+
+/* Javascript class */
+
+.square {
+    width: 30px;
+    height: 30px;
+    border: 1px solid darkslategray;
+}
