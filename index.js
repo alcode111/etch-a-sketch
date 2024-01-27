@@ -2,6 +2,8 @@ const gridContainer = document.getElementById("grid-container")
 const newGridBtn = document.getElementById("new-grid-btn")
 const clearGridBtn = document.getElementById("clear-grid-btn")
 
+let squares = []
+
 newGridBtn.addEventListener('click', function() {
     const gridNumberPrompt = prompt("Please select a grid number between 1 and 100.")
     let userInput = parseInt(gridNumberPrompt)
@@ -18,6 +20,12 @@ newGridBtn.addEventListener('click', function() {
     }
 })
 
+clearGridBtn.addEventListener('click', function() {
+    for (let i = 0; i < squares.length; i++) {
+        squares[i].classList.remove("square-bg")
+    }
+})
+
 function createGrid(userInput) {
     for (let i = 0; i < userInput; i++) {
         const row = document.createElement("div")
@@ -25,6 +33,7 @@ function createGrid(userInput) {
         for (let j = 0; j < userInput; j++) {
             const square = document.createElement("div")
             square.classList.add("square")
+            squares.push(square)
 
             //Game logic on mouseover
             square.addEventListener('mouseover', function() {
@@ -37,3 +46,4 @@ function createGrid(userInput) {
 }
 
 createGrid(16)
+
