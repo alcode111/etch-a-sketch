@@ -2,6 +2,10 @@ const gridContainer = document.getElementById("grid-container")
 const newGridBtn = document.getElementById("new-grid-btn")
 const clearGridBtn = document.getElementById("clear-grid-btn")
 
+function clearGrid() {
+    gridContainer.innerHTML = ""
+}
+
 function createGrid(userInput) {
     for (let i = 0; i < userInput; i++) {
         const row = document.createElement("div")
